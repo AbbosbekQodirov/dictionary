@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  transition: all 0.2s ease;
+}
+.body.dark{
+background-color: black;
+  color: white;
+}
+.body.dark .input{
+    background-color: #1F1F1F;
+    color: white !important;
+}
+.body.dark input{
+    color: white !important;
+}
+.body.dark input::placeholder{
+    color: rgb(206, 202, 202);
+}
+.body.dark  .mode_btn{
+    background-color: #A445ED;
+}
+.body.dark a{
+    color: white !important;
+}
+
+
+
+
+.container {
+  max-width: 737px;
+  margin: 0 auto;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px;
+}
+.change_mode {
+  display: flex;
+  align-items: center;
+}
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  gap: 15px;
+  padding-right: 26px;
+  position: relative;
+  cursor: pointer;
+}
+.options {
+  width: 120%;
+  top: -10px;
+  right: 20px;
+  position: absolute;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
+.options div {
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.options.active {
+  opacity: 1;
+  transform: scale(1);
+  top: 40px;
+}
+.options div:hover {
+  background-color: #8f19e8;
+  color: white;
+}
+.select_icon{
+    transition: all 0.2s ease-in-out;
+}
+.select_icon.active{
+    transform: rotate(180deg);
+}
+#sans {
+  font-family: sans-serif;
+}
+#serif {
+  font-family: serif;
+}
+#mono {
+  font-family: monospace;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 0px;
+  padding-left: 26px;
+  border-left: 2px solid #8d8c8c;
+}
+.mode_btn {
+  width: 40px;
+  height: 20px;
+  background-color: #757575;
+  border-radius: 10px;
+  padding: 3px;
+  cursor: pointer;
+}
+.mode_span{
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: white;
+  transition: all 0.2s ease;
+  
+}
+.mode_span.active{
+    float: right;
+}
+.input {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.input input {
+  font-size: 20px;
+  border: none;
+  width: 200%;
+  background-color: transparent;
+  outline: none;
+}
+
+
+.main_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.word {
+  font-size: 64px;
+  margin-bottom: 8px;
+}
+.speakword {
+  font-size: 24px;
+  color: #a445ed;
+}
+.play {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: rgba(191, 126, 241, 0.257);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.play i {
+  color: #bf7ef1;
+}
+.part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.part div:nth-child(2) {
+  border: 1px solid #f4f4f4;
+  width: 100%;
+  height: 0px;
+}
+.partOfSpeech {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.meanings {
+  margin-bottom: 30px;
+}
+
+.definitions h2 {
+  font-size: 20px;
+  font-weight: 100;
+  color: #757575;
+}
+
+.definitions ul {
+  margin-left: 38px;
+  margin-top: 22px;
+}
+.definitions ul {
+  list-style: none;
+  font-size: 18px;
+}
+.definitions ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.definitions ul li::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #8f19e8;
+  left: -20px;
+  top: 8px;
+}
+.synonym {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.synonym h2{
+  font-weight: 100;
+  font-size: 20px;
+  color: #757575;
+
+}
+.synonyms {
+  display: inline-block;
+  font-weight: bold;
+  color: #a445ed;
+  font-size: 20px;
+}
+.example {
+  color: #757575 !important;
+}
+
+.source {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  color: #757575;
+  text-decoration: underline;
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+
+.source img {
+  display: flex;
+  width: 20px;
+}
+.source a {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
